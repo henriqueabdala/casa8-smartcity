@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Exo Bold';
+    src: url('../fonts/Exo-Bold.woff2') format('woff2'),
+        url('../fonts/Exo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Exo Medium';
+    src: url('../fonts/Exo-Medium.woff2') format('woff2'),
+        url('../fonts/Exo-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Exo Regular';
+    src: url('../fonts/Exo-Regular.woff2') format('woff2'),
+        url('../fonts/Exo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Exo Italic';
+    src: url('../fonts/Exo-Regular-Italic.woff2') format('woff2'),
+        url('../fonts/Exo-Regular-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Flama Book';
+    src: url('../fonts/Flama-Book.woff2') format('woff2'),
+        url('../fonts/Flama-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Flama Condensed Book';
+    src: url('../fonts/FlamaCondensed-Book.woff2') format('woff2'),
+        url('../fonts/FlamaCondensed-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
