@@ -8,6 +8,7 @@
 .header{
   background: #3f3f3e;
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -97,4 +98,189 @@
       }
     }
   }
+}
+
+.main{
+
+  // CONCEITO
+  .conceito{
+    background-image: url(../images/conexao.png);
+    background-repeat: no-repeat;
+    background-position: 50% calc(100% + 75px);
+    padding: 125px 0 45px 0;
+    position: relative;
+
+    .first-line{
+      display: flex;
+      justify-content: space-between;
+      h2{
+        font-size: 56px;
+        line-height: 0.89;
+        color: #444242;
+        margin-bottom: 24px;
+      }
+      p{
+        font-family: $bold;
+        font-size: 24px;
+        color: #444242;
+        margin-bottom: 0;
+        strong{
+          background: #e6c151;
+          color: white;
+          padding: 4px 6px 2px 6px;
+          margin-left: 4px;
+        }
+      }
+      h1{
+        font-size: 0;
+        width: fit-content;
+      }
+    }
+    .people{
+      display: inline-flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 475px;
+      justify-content: center;
+      align-items: center;
+      background-image: url(../images/globo.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+    @media screen and (max-width: 990px){
+      padding: 105px 0 35px 0;
+    }
+    @media screen and (max-width: 768px) {
+      background: none;
+      &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../images/conexao.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        opacity: 0.4;
+      }
+      .first-line{
+        display: block;
+        margin-bottom: 20px;
+        h2{
+          font-size: 42px;
+        }
+        p{
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        h1{
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .people{
+        background: none;
+        height: auto;
+        li{
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // ABOUT
+  .about{
+    background: #d5d5d5;
+    display: flex;
+    justify-content: center;
+    .countrys{
+      text-transform: uppercase;
+      display: inline-flex;
+      white-space: nowrap;
+      padding: 16px 0;
+      .call{
+        font-family: $bold;
+        margin-right: 20px;
+      }
+      .country-list{
+        display: inline-flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        gap: 16px;
+        list-style-type: none;
+        font-size: 16px;
+        li{
+          &:before{
+            content: '•';
+            margin-right: 16px;
+          }
+          &:first-child{
+            &::before{
+              display: none;
+            }
+          }
+        }
+      }
+  
+    }
+    @media screen and (max-width: 1260px) {
+      .countrys{
+        padding: 15px;
+        overflow-x: scroll;
+        scrollbar-width: auto;
+        scrollbar-color: #5c5c5c #ffffff;
+      
+        /* Chrome, Edge, and Safari */
+        &::-webkit-scrollbar {
+          width: 10px;
+          height: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background: #ffffff;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #5c5c5c;
+          border-radius: 8px;
+          border: 2px solid #ffffff;
+        }
+        .country-list{
+          li{
+            &:last-child{
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 768px){
+      .countrys{
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &::-webkit-scrollbar-track {
+          display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          display: none;
+        }
+        .country-list{
+          li{
+            &:last-child{
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  
 }
