@@ -282,5 +282,161 @@
     }
   }
 
+  // WORLD
+  .world{
+    padding: 32px 0 0 0;
+    .map{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 16px;
+      img{
+        width: 100%;
+        max-width: 730px;
+      }
+      p{
+        width: 436px;
+        font-size: 18px;
+        line-height: 2;
+        text-align: left;
+        color: #444242;
+      }
+    }
+    @media screen and (max-width: 1100px) {
+      .map{
+        display: block;
+        padding: 0 15px;
+        img{
+          width: 100%;
+          margin: 0 auto;
+          display: block;
+        }
+        p{
+          width: 100%;
+          max-width: 436px;
+          margin: 0 auto;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
   
+
+  // COMPLIANCE
+  .compliance{
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      width: 100%;
+      li{
+        width: 215px;
+        height: 360px;
+        background: #dbdee2;
+        position: relative;
+        padding: 30px 0;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: all 0.5s ease-in-out;
+        &:hover{
+          background-size: 120%;
+          transition: all 0.5s ease-in-out;
+        }
+        span{
+          position: absolute;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-family: $bold;
+          color: white;
+          transform: rotate(-90deg);
+          padding: 2px 3px 1px 3px;
+          text-align: center;
+          width: 205px;
+          border-radius: 15px;
+        }
+        p{
+          font-size: 16px;
+          font-family: $medium;
+          line-height: 1.33;  text-align: right;
+          color: #444242;
+        }
+        &.one{
+          background-image: url('../images/arquitetura.png');
+          background-position: bottom;
+          span{
+            background: #c94954;
+            right: -89px;
+            top: 46px;
+          }
+          p{
+            margin-right: 55px;
+          }
+        }
+        &.two{
+          background-image: url('../images/tecnologia.png');
+          background-position: top;
+          span{
+            background: #6fb3e6;
+            left: -89px;
+            bottom: 40px;
+          }
+          p{
+            margin-left: 55px;
+            text-align: left;
+            margin-top: 155px;
+          }
+        }
+        &.three{
+          background-image: url('../images/meioambiente.png');
+          background-position: bottom;
+          span{
+            background: #94bc5e;
+            left: -89px;
+            top: 46px;
+          }
+          p{
+            text-align: left;
+            margin-left: 55px;
+          }
+        }
+        &.four{
+          background-image: url('../images/pessoas.png');
+          background-position: top;
+          span{
+            background: #e4c051;
+            left: -89px;
+            bottom: 40px;
+          }
+          p{
+            margin-left: 55px;
+            text-align: left;
+            margin-top: 195px;
+          }
+        }
+      }
+      @media screen and (max-width: 990px) {
+        display: block;
+        margin-top: 50px;
+        li{
+          margin: 0 auto 60px auto;
+          &.three{
+            span{
+              right: -89px;
+              left: initial;
+            }
+            p{
+              text-align: right;
+              margin-left: 0;
+              margin-right: 55px;
+            }
+          }
+          
+        }  
+      }
+    }
+  }
 }
