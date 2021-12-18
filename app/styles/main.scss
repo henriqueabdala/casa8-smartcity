@@ -7,7 +7,6 @@
 // Custom CSS
 .header{
   background: #3f3f3e;
-  position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
@@ -81,6 +80,7 @@
   }
   @media screen and(max-width: 990px) {
     padding: 15px 15px;
+    position: fixed;
     button{
       display: block;
       background: white;
@@ -107,7 +107,7 @@
     background-image: url(../images/conexao.png);
     background-repeat: no-repeat;
     background-position: 50% calc(100% + 75px);
-    padding: 125px 0 45px 0;
+    padding: 75px 0 45px 0;
     position: relative;
 
     .first-line{
@@ -322,7 +322,6 @@
     }
   }
   
-
   // COMPLIANCE
   .compliance{
     ul{
@@ -368,7 +367,7 @@
           background-image: url('../images/arquitetura.png');
           background-position: bottom;
           span{
-            background: #c94954;
+            background: #e62e41;
             right: -89px;
             top: 46px;
           }
@@ -380,7 +379,7 @@
           background-image: url('../images/tecnologia.png');
           background-position: top;
           span{
-            background: #6fb3e6;
+            background: #5cb9ea;
             left: -89px;
             bottom: 40px;
           }
@@ -394,7 +393,7 @@
           background-image: url('../images/meioambiente.png');
           background-position: bottom;
           span{
-            background: #94bc5e;
+            background: #6cc05d;
             left: -89px;
             top: 46px;
           }
@@ -407,7 +406,7 @@
           background-image: url('../images/pessoas.png');
           background-position: top;
           span{
-            background: #e4c051;
+            background: #f3c03f;
             left: -89px;
             bottom: 40px;
           }
@@ -438,5 +437,190 @@
         }  
       }
     }
+  }
+
+  // VIDEOS
+  .videos{
+    padding-top: 110px;
+    padding-bottom: 150px;
+    background-image: url('../images/conexao-element.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    h2{
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 36px;
+      font-family: $bold;
+      line-height: 1.45;
+      color: #000;
+      padding: 0;
+      margin: 0 0 72px 0;
+    }
+    ul{
+      display: flex;
+      gap: 48px;
+      list-style-type: none;
+      padding: 0;
+      li{
+        width: 100%;
+        height: 300px;
+        border-radius: 18px;
+        box-shadow: 3px 4px 32px 4px rgba(65, 65, 65, 0.18);
+        background-color: rgba(255,255,255,0.75);
+        a{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    @media screen and (max-width: 468px) {
+      padding-bottom: 80px;
+      ul{
+        li{
+          height: 150px;
+        }
+      }
+    }
+  }
+
+  // DESCUBRA
+  .descubra{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 70px;
+    @media screen and(max-width: 990px) {
+      display: block;
+      text-align: center;
+      h2{
+        text-align: center !important;
+      }
+      .paragraphs{
+        max-width: 600px;
+        margin: 0 auto;
+        p{
+          &:first-child{
+            margin-bottom: 20px !important;
+          }
+        }
+      }
+    }
+    h2{
+      text-align: right;
+    }
+    .paragraphs{
+      max-width: 600px;
+      p{
+        &:first-child{
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  // LIFESTYLE
+  .lifestyle{
+    justify-content: center;
+    display: flex;
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 16px;
+      @media screen and (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
+      li{
+        width: 250px;
+        height: 485px;
+        padding: 225px 16px 16px 16px;
+        text-align: center;
+        color: white;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: all 0.5s ease-in-out;
+        background-position: top;
+        &:hover{
+          background-size: 120%;
+          transition: all 0.5s ease-in-out;
+        }
+
+        h2{
+          text-transform: capitalize;
+          font-size: 24px;
+          line-height: 2;
+          letter-spacing: 0.17px;
+        }
+        p{
+          font-size: 12px;
+          line-height: 1.5;
+          letter-spacing: 0.5px;
+        }
+        &:nth-child(1){
+          background-color: #e62e41;
+          background-image: url('../images/recreacao.png');
+        }
+        &:nth-child(2){
+          background-color: #5cb9ea;
+          background-image: url('../images/planetapp.png');
+        }
+        &:nth-child(3){
+          background-color: #6cc05d;
+          background-image: url('../images/vidaverde.png');
+        }
+        &:nth-child(4){
+          background-color: #f3c03f;
+          background-image: url('../images/gestor.png');
+        }
+      }
+    }
+  }
+}
+
+.footer{
+  padding-top: 60px;
+  padding-bottom: 136px;
+  .patrocinadores-list{
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 990px) {
+      display: block;
+      div{
+        margin-bottom:50px;
+      }
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      span{
+        width: 100%;
+        font-family: $bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      img{
+        width: fit-content;
+        margin: auto;
+      }
+    }
+  }
+  p{
+    font-size: 12px;
+    text-align: center;
   }
 }
