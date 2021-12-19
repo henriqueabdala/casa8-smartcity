@@ -1,6 +1,3 @@
-console.log('\'Allo \'Allo!');
-
-
 new VenoBox({
     selector: '.venobox-video',
 });
@@ -30,7 +27,7 @@ form.addEventListener('submit', e => {
         redirect: "follow", 
         body: "" 
     };
-    fetch(`https://casa8.hypnobox.com.br/email.receber.php?nome="${v.name}"&email="${v.email}"&id_produto="${v.produto}"&mensagem="${v.msg}"&ddd_celular="${number.ddd}"&tel_celular="${number.phone}"&midia="${v.landpage}"`, options)
+    fetch(`https://casa8.hypnobox.com.br/email.receber.php?nome=${v.name}&email=${v.email}&id_produto=${v.produto}&mensagem="${v.msg}&ddd_celular=${number.ddd}&tel_celular=${number.phone}&midia=${v.landpage}`, options)
     .then(r => r.text())
     .then(r => {
         alert("Seu contato foi adicionado com sucesso! Em breve entraremos em contato!");
