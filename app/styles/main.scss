@@ -624,3 +624,143 @@
     text-align: center;
   }
 }
+
+.fixed-bar{
+  width: 100%;
+  height: 100px;
+  background: #3f3f3e;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+    align-items: center;
+  ul{
+    display: flex;
+    gap: 10px;
+    color: white;
+    margin-bottom: 0;
+    justify-content: space-evenly;
+    padding: 0;
+    list-style: none;
+    
+    li{
+      position: relative;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 990px) {
+        a{
+          font-size: 0  !important;
+          span{
+            font-size: 0 !important;
+          }
+        }
+        &:first-child{
+          display: none;
+        }
+        &:after{
+          display: none !important;
+        }
+      }
+      &:after{
+        content: "";
+        width: 2px;
+        height: 38px;
+        background: white;
+        display: inline-block;
+        position: absolute;
+        right: -35px;
+        top: auto;
+        bottom: auto;
+      }
+      a{
+        font-family: $bold;
+        font-size: 20px;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        line-height: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        color: white;
+        cursor: pointer;
+        transition: all .3s linear;
+        letter-spacing: 1px;
+        img{
+          margin-right: 20px;
+        }
+        &:hover{
+          text-decoration: none;
+          transform: scale(1.1);
+        }
+      }
+      &:last-child{
+        &:after{
+          display: none;
+        }
+      }
+      &:nth-child(2){
+        span, strong{
+          width: 100%;
+          display: block;
+        }
+        span{
+          font-size: 14px;
+          font-family: $regular;
+        }
+      }
+    }
+  }
+}
+
+.modal-edit{
+  label, input, textarea{
+    display: block;
+    width: 100%;
+  }
+  label{
+    font-size: 12px;
+  }
+  input{
+    padding: 3px;
+    font-size: 16px;
+  }
+  .btn-primary{
+    display: block;
+    width: 100%;
+  }
+  .choice{
+    font-size: 18px;
+  }
+  .radios{
+    display:flex;
+    align-items: center;
+    input{
+      width: fit-content;
+      margin-right: 15px;
+      font-size: 20px;
+    }
+    label{
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+  }
+  .check{
+    display: flex;
+    align-items: center;
+    label{
+      margin-bottom: 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input{
+      width: fit-content;
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
