@@ -50,6 +50,9 @@ $( document ).ready(function() {
         spinner: 'rotating-plane'
         
     });
+    new VenoBox({
+        selector: '.tour'
+    });
     
     
     const form = document.querySelector('#submit-hypnobox');
