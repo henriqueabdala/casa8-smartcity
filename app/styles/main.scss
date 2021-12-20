@@ -5,8 +5,6 @@
 @import "_global";
 
 
-
-
 // Custom CSS
 .header{
   background: #3f3f3e;
@@ -590,6 +588,47 @@
     }
   }
 
+  .itememp{
+    .first-line{
+      display: grid;
+      grid-template-columns: 3.5fr 6.5fr;
+      gap: 50px;
+      margin-bottom: 18px;
+      .item-1{
+        font-size: 12px;
+        font-family: $bold;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .splide{
+      ul{
+        li{
+          display: flex;
+          justify-content: center;
+          a{
+            img{
+              width: 315px;
+              height: 200px;
+              object-fit: cover;
+            }
+            p{
+              font-size: 10px;
+              color: black;
+              text-decoration: none;
+              font-family: $bold;
+              text-transform: uppercase;
+            }
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
   // WAZE
   .waze{
     background: #dbdee2;
@@ -598,6 +637,7 @@
     .itens{
       display: flex;
       gap: 72px;
+      justify-content: center;
       .item{
         display: flex;
         gap: 32px;
@@ -656,8 +696,6 @@
       }
     }
   }
-
-
 }
 
 .footer{

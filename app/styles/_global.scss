@@ -4,7 +4,30 @@ h1,h2,h3,h4,h5,h6{
 body{
     font-family: $regular;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 .vbox-close{
     right: 8px;
+}
+.vbox-next{
+    right: 35px;
+}
+.splide__arrow{
+    height: 200px !important;
+    border-radius: initial !important;
+}
+.splide__arrow{
+    margin-top: -16px !important;
+    width: 24px;
+    background-color: #423f40;
+    svg{
+        fill: white;
+    }
+}
+.splide__arrow--prev{
+    left: 0px;
+}
+.splide__arrow--next{
+    right: 0px;
 }
